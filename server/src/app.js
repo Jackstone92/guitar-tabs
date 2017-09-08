@@ -12,9 +12,10 @@ app.use(bodyParser.json())
 app.use(cors())
 
 // http request //
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
+  // return message with email provided in payload //
   res.send({
-    message: 'hello world!'
+    message: `Hello ${req.body.email}! Your user was registered! Have fun!`
   })
 })
 
